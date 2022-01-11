@@ -1,5 +1,3 @@
-#ifndef TESTS_C
-#define TESTS_C
 #include <stdio.h>
 #include <assert.h>
 #include "PairColors.h"
@@ -28,13 +26,11 @@ void testPairToNumber(enum MajorColor major, enum MinorColor minor, int expected
 int main() {
     testNumberToPair(4, WHITE, BROWN);
     testNumberToPair(5, WHITE, SLATE);
-    testNumberToPair(-1, INVALID, INVALID);
+    testNumberToPair(-1, INVALID_MAJOR, INVALID_MINOR);
 
     testPairToNumber(BLACK, ORANGE, 12);
-    testPairToNumber(INVALID, INVALID, -1);
+    testPairToNumber(INVALID_MAJOR, INVALID_MINOR, -1);
     testPairToNumber(VIOLET, SLATE, 25);
     PrintColorCodeManual();
     return 0;
 }
-
-#endif

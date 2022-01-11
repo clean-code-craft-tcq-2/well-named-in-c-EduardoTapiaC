@@ -17,8 +17,8 @@ ColorPair GetColorFromPairNumber(int pairNumber) {
     ColorPair colorPair;
     //handle invalid data because it may cause unwanted result
     if(pairNumber < 0 || pairNumber > MAX_COLORPAIRS) {
-        colorPair.majorColor = INVALID;
-        colorPair.minorColor = INVALID;
+        colorPair.majorColor = INVALID_MAJOR;
+        colorPair.minorColor = INVALID_MINOR;
         return colorPair;
     }
     int zeroBasedPairNumber = pairNumber - 1;
